@@ -11,6 +11,11 @@ eureka:
 spring:
   application:
     name: 'user'
+  zipkin: 
+    base-url: http://localhost:5000  #指定Zipkin server地址 
+  sleuth: 
+    sampler: 
+      probability: 1.0
 hystrix:
   command:
     # 是指power实例的配置时间
@@ -34,4 +39,5 @@ management:
         include: '*'
 server:
   port: 8999
+    
 
